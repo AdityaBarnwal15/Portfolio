@@ -16,7 +16,7 @@ import {
 const UserEmail = ({ name }) => (
   <Html>
   <Head />
-  <Preview>Yelp recent login</Preview>
+  <Preview>Anurag Singh</Preview>
   <Body style={main}>
     <Container>
       
@@ -25,7 +25,7 @@ const UserEmail = ({ name }) => (
           <Img
             style={image}
             width={620}
-            src='/'
+            src='https://raw.githubusercontent.com/itsAnuragsingh/portfolio/refs/heads/main/public/cover.png'
           />
         </Row>
 
@@ -51,7 +51,11 @@ const UserEmail = ({ name }) => (
               Thank you for getting in touch! I’ve received your message and will respond as soon as possible. 
             </Heading>
 
-            <Text style={paragraph}>
+            <Text style={
+              {textAlign: "center",
+              fontSize: 16,
+              color: "rgb(0,0,0, 0.7)",}
+            }>
               <b>Looking forward to connecting with you! </b>
             </Text>
 
@@ -59,7 +63,8 @@ const UserEmail = ({ name }) => (
         </Row>
         <Row style={{ ...boxInfos, paddingTop: "0" }}>
           <Column style={containerButton} colSpan={2}>
-            <Button style={button}>Learn More</Button>
+            <Button style={button}
+            href="https://www.linkedin.com/in/itsanuragsingh7/">connect with LinkedIn</Button>
           </Column>
         </Row>
       </Section>
@@ -68,7 +73,7 @@ const UserEmail = ({ name }) => (
         <Img
           style={image}
           width={620}
-          src='/'
+          src='https://raw.githubusercontent.com/itsAnuragsingh/portfolio/refs/heads/main/public/footer.png'
         />
       </Section>
 
@@ -79,7 +84,7 @@ const UserEmail = ({ name }) => (
           color: "rgb(0,0,0, 0.7)",
         }}
       >
-        © 2022 | Anurag Singh
+        © 2024 | Anurag Singh
       </Text>
     </Container>
   </Body>
