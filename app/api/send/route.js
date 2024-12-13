@@ -19,7 +19,7 @@ export async function POST(req) {
     }
 
     // Log the incoming data
-    console.log("Form Data:", { name, email, message });
+    
 
     // Create transporter
     const transporter = nodemailer.createTransport({
@@ -51,7 +51,7 @@ export async function POST(req) {
 
     return new Response(JSON.stringify({ message: 'Emails sent successfully!' }), { status: 200 });
   } catch (error) {
-    console.error("Error sending emails:", error);
+    
     return new Response(JSON.stringify({ error: 'Failed to send emails.' }), { status: 500 });
   }
 }

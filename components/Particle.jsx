@@ -17,7 +17,7 @@ export default function Particle() {
   const { theme } = useTheme()
 
   useEffect(() => {
-    console.log('Current theme:', theme)
+    
     const canvas = canvasRef.current
     const ctx = canvas?.getContext('2d')
     if (!canvas || !ctx) return

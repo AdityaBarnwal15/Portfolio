@@ -52,7 +52,7 @@ export default function ContactSection() {
   const onSubmit = async (values) => {
     try {
       setIsSubmitting(true);
-      console.log("Submitting form with values:", values);  // Debugging
+        // Debugging
       const response = await axios.post('/api/send', values);
       if (response.status === 200) {
         setIsSubmitting(false);
@@ -61,7 +61,7 @@ export default function ContactSection() {
           setIsSubmitted(false);
         }, 3000);
         form.reset();
-        console.log('Success:', response.data);
+        
       } else {
         throw new Error('Failed to submit form');
       }
