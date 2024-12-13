@@ -18,6 +18,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import { useTheme } from '@/lib/theme-provider'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -37,6 +38,7 @@ export default function ContactSection() {
   const formRef = useRef(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const controls = useAnimation()
+  const { theme } = useTheme()
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -99,16 +101,21 @@ export default function ContactSection() {
   }, [])
 
   useEffect(() => {
+    const lightThemeColor = `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(138, 43, 226, 0.2) 0%, rgba(138, 43, 226, 0) 50%)`; // Violet
+    const darkThemeColor = `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(250, 204, 21, 0.2) 0%, rgba(250, 204, 21, 0) 50%)`; // Yellow
+
+    const background = theme === "dark" ? darkThemeColor : lightThemeColor;
+
     controls.start({
-      background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(250, 204, 21, 0.2) 0%, rgba(250, 204, 21, 0) 50%)`,
-    })
-  }, [mousePosition, controls])
+      background,
+    });
+  }, [mousePosition, controls, theme]);
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 dark:bg-[#0f0715] text-white overflow-hidden" id="contact-section">
       <div className="max-w-3xl mx-auto">
         <motion.h2 
-          className="text-5xl font-bold mb-16 text-center text-yellow-400"
+          className="text-5xl font-bold mb-16 text-center dark:text-yellow-400 text-[#170525]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -118,7 +125,7 @@ export default function ContactSection() {
 
         <motion.div
           ref={formRef}
-          className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 shadow-lg overflow-hidden"
+          className="relative dark:bg-white/5 bg-gray-700 backdrop-blur-lg rounded-3xl p-8 shadow-lg overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -138,11 +145,11 @@ export default function ContactSection() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6"
+                className="w-24 h-24 dark:bg-yellow-400 bg-[#170525] rounded-full flex items-center justify-center mx-auto mb-6"
               >
-                <Send className="w-12 h-12 text-black" />
+                <Send className="w-12 h-12 dark:text-black text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">Message Sent!</h3>
+              <h3 className="text-2xl font-bold mb-4 dark:text-yellow-400 text-white">Message Sent!</h3>
               <p className="text-gray-300">Thank you for reaching out. I'll get back to you soon!</p>
             </motion.div>
           ) : (
@@ -189,7 +196,7 @@ export default function ContactSection() {
                 />
                 <Button 
                   type="submit" 
-                  className="w-full bg-yellow-400 text-black hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                  className="w-full dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500  bg-[#170525] text-white hover:bg-[#170520] transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}

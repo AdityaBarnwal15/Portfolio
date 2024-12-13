@@ -33,7 +33,7 @@ export default function EducationSection() {
     <section className=" bg-white dark:bg-[#0f0715] py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
-          className="text-5xl font-bold mb-16 text-center text-yellow-400"
+          className="text-5xl font-bold mb-16 text-center dark:text-yellow-400 text-[#170525]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

@@ -144,7 +144,7 @@ export default function Particle() {
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
         <motion.h2 
-          className=" text-3xl sm:text-5xl font-bold mb-8 text-center text-white"
+          className=" text-3xl sm:text-5xl font-bold mb-8 text-center dark:text-white"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

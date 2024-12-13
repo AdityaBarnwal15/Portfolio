@@ -80,11 +80,7 @@ const DATA = {
         url: "https://x.com/itsanurag707",
         icon: Icons.x,
       },
-      email: {
-        name: "Send Email",
-        url: "mailto:itsanurag707@gmail.com",
-        icon: Icons.email,
-      },
+      
     },
   },
 };

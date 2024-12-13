@@ -44,7 +44,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-blue-950 dark:text-yellow-400">About Me</span>
+          <span className="text-[#170525] dark:text-yellow-400">About Me</span>
           
         </motion.h2>
 
@@ -149,7 +149,7 @@ export default function About() {
           onClick={() => window.open('https://github.com/itsAnuragsingh', '_blank')}
             variant="outline"
             size="lg"
-            className="bg-transparent border-2 border-blue-950 text-blue-950 hover:bg-blue-950 hover:text-white border-2 dark:border-yellow-400 dark:text-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-black px-6 sm:px-8 py-4 sm:py-6 rounded-full text-base sm:text-lg font-semibold  transition-colors shadow-lg dark:shadow-yellow-400/20"
+            className="bg-transparent border-2 border-[#170525] text-[#170525] hover:bg-[#170525] hover:text-white border-2 dark:border-yellow-400 dark:text-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-black px-6 sm:px-8 py-4 sm:py-6 rounded-full text-base sm:text-lg font-semibold  transition-colors shadow-lg dark:shadow-yellow-400/20"
           >
             <FaGithub className="mr-2 h-5 w-5" />
             Github

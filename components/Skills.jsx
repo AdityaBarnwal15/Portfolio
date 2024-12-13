@@ -43,7 +43,7 @@ export default function Skills() {
     <section className="py-20 px-4 sm:px-6 lg:px-8  text-white  from-gray-100 to-gray-200 dark:bg-[#0f0715]">
       <div className="max-w-6xl mx-auto ">
         <motion.h2 
-          className="text-5xl font-bold mb-16 text-center text-yellow-400"
+          className="text-5xl font-bold mb-16 text-center dark:text-yellow-400 text-[#170525]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -55,7 +55,7 @@ export default function Skills() {
           {/* Design Tools */}
           <div>
             <motion.h3 
-              className="text-3xl text-center font-bold mb-8 text-yellow-400"
+              className="text-3xl text-center font-bold mb-8 dark:text-yellow-400 text-[#170525]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -87,7 +87,7 @@ export default function Skills() {
           {/* Technologies */}
           <div>
             <motion.h3 
-              className="text-3xl font-bold mb-8 text-yellow-400 text-center"
+              className="text-3xl font-bold mb-8 dark:text-yellow-400 text-[#170525] text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -119,7 +119,7 @@ export default function Skills() {
           {/* Development Tools */}
           <div>
             <motion.h3 
-              className="text-3xl font-bold mb-8 text-yellow-400 text-center"
+              className="text-3xl font-bold mb-8 dark:text-yellow-400 text-[#170525] text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
