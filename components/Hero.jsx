@@ -65,7 +65,7 @@ export default function Hero() {
               size="lg"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/resume.pdf';
+                link.href = '';
                 link.download = 'Anurag_Singh_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
